@@ -14,6 +14,7 @@ class TriangularNumber
 		@size++
 
 # test
+# Answer is 76576500
 triangular = new TriangularNumber()
 while triangular.numbers_of_factors() <= 500
 	triangular.add_numbers()
