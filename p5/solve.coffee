@@ -22,4 +22,5 @@ divisible_to = (n) ->
 	return number
 
 # test
-console.log divisible_to(10)
+# Answer is 232792560
+console.log divisible_to(20)
