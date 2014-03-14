@@ -100,6 +100,24 @@ digits =
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"
 
-sum = (list = []) ->
-	list.reduce (a, b) -> a + b
+sum = []
+j = 49
+carry_on = 0
+while j >=0
+	i = j
+	sum[j] = 0
+	sum[j] += carry_on
+	while i <= 4950 + j
+		sum[j] += parseInt digits[i]
+		i += 50
+	remainder = sum[j] % 10
+	carry_on = Math.floor sum[j] / 10
+	sum[j] = remainder unless j is 0
+	j--
 
+length_of_0th = sum[0].toString().length
+length_of_others = 10 - length_of_0th
+first_10_numbers = sum[0].toString() + (sum[index].toString() for index in [1..length_of_others]).join("")
+
+# answer is 5537376230
+console.log first_10_numbers
