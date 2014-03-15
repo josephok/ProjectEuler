@@ -26,4 +26,4 @@ def path(triangle, num):
     return s
 
 # answer is 1074
-print(max(path(triangle, n) for n in xrange(0, 16384)))
+print(max(path(triangle, n) for n in range(0, 16384)))
