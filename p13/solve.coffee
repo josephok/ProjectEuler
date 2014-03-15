@@ -104,12 +104,15 @@ sum = []
 j = 49
 carry_on = 0
 while j >=0
-	i = j
+	#i = j
 	sum[j] = 0
 	sum[j] += carry_on
-	while i <= 4950 + j
+	#while i <= 4950 + j
+	#	sum[j] += parseInt digits[i]
+	#	i += 50
+	for i in [j..4950+j] by 50
 		sum[j] += parseInt digits[i]
-		i += 50
+		
 	remainder = sum[j] % 10
 	carry_on = Math.floor sum[j] / 10
 	sum[j] = remainder unless j is 0
