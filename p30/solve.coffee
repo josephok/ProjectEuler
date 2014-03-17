@@ -1,0 +1,1 @@
+console.log (i for i in [2..Math.pow(9, 5) * 6] when i is (Math.pow(parseInt(digit), 5) for digit in i.toString()).reduce (a, b) -> a + b).reduce (a, b) -> a + b
