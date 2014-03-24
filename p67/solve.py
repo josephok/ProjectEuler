@@ -1,7 +1,7 @@
 with open('triangle.txt') as f:
 	data = []
 	for line in f:
-		data.append(list(map(int, line.rstrip('\n').split())))
+		data.append(list(map(int, line.rstrip().split())))
 
 for i in range(99, 0, -1):
 	for j in range(i, 0, -1):
