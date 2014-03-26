@@ -6,6 +6,7 @@ def solve(money, coinlist):
         if money - coinlist[i] == 0:
             sum += 1
         elif money - coinlist[i] > 0:
-            sum += Sol(money-coinlist[i], coinlist[:i+1])
+            sum += solve(money-coinlist[i], coinlist[:i+1])
     return sum
+
 print (solve(200, [1,2,5,10,20,50,100,200]))
