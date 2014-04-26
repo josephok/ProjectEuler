@@ -2,7 +2,7 @@ import unittest
 from solve import sum_of_square
 
 class MyTest(unittest.TestCase):
-    def test_sum_if_square(self):
+    def test_sum_of_square(self):
         self.assertEqual(1, sum_of_square(1))
         self.assertEqual(4, sum_of_square(2))
         self.assertEqual(9, sum_of_square(3))
